@@ -4,8 +4,8 @@ class Shelter
 	def initialize(name, address)
 		@name = name
 		@address = address
-		@clients = []
-		@animals = []
+		@clients = {}
+		@animals = {}
 	end
 
 #are these next two necessary?
@@ -18,24 +18,22 @@ class Shelter
 	end
 
 	def add_pet(animal)
-		if animal.class == Animal
-			@animals << animal
-		else
-			return false
-		end
-	end
-
-	def add_client(person)
-		if person.class == Person
-			@clients << person
-		else
-			return false
-		end
+		@animals[animal.name] = animal
 	end
 
 	def remove_pet(animal)
-		pet = animal(animal_name)
-		animal.delete(animal_name)
+		pet = @animals[animal]
+		@animals.delete(animal)
 		return pet
 	end
+
+	def add_client(person)
+		# if person.class == Person
+		# 	@clients << person
+		# else
+		# 	return false
+		# end
+	end
+
+
 end
