@@ -4,7 +4,7 @@ class Person
 	def initialize(name, age, num_pets)
 		@name = name
 		@age = age
-		@num_pets = num_pets
+		@num_pets = num_pets.to_i
 		@pets = {}
 	end
 
@@ -12,18 +12,23 @@ class Person
 		@pets
 	end
 
-	#populate pets with input
+	#populate pets with input?
 
+#this is good
 	def add_pet(animal)
 		@pets[animal.name] = animal
-		#change pet count
+		#increment:
+		@num_pets = @num_pets + 1
+		#this is now returning new @num_pets
 	end
 
-	def remove_pet(animal)
-		pet = @pets[animal]
-		@pets.delete(animal)
-		return pet
+#this is good
+	def remove_pet(animal_name)
+		pet = @pets[animal_name]
+		@pets.delete(animal_name)
 		#change pet count
+		@num_pets = @num_pets - 1
+		return pet
 	end
 end
 
@@ -37,7 +42,7 @@ end
 
 #this part works
 # shelter.add_pet(animal)
-# person.remove_pet(name) -returns an animal
+# person.remove_pet(name) -returns an animal to pass above
 
 # same thing
 # shelter.remove_pet(name) 
