@@ -2,8 +2,18 @@ class Shelter
 	attr_accessor :name, :address
 
 	def initialize(name, address)
+		@name = name
+		@address = address
 		@clients = []
 		@animals = []
+	end
+
+	def clients
+		@clients
+	end
+
+	def animals
+		@animals
 	end
 
 	def add_pet(animal)
@@ -26,6 +36,7 @@ class Shelter
 	end
 
 	def return_pet
+	end
 
 	def animals
 	end
