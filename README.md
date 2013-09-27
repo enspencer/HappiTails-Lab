@@ -22,42 +22,45 @@
 - You should work on this lab in groups
 
 ###Explanation
-- You are the manager at HappiTails animal shelter. You need to manage your
-shelter by storing and manipulating information about clients and animals.
-- Consider having the students make git commits as they finish each phase, so
-they can see the history
+- You are the manager at HappiTails animal shelter. You need to manage your shelter by storing and manipulating information about clients and animals.
+- Consider having the students make git commits as they finish each phase, so they can see the history
 
 ###Specification:
 #####Object Specs:
-- Animal:
+- Animal: -have initialize take variables in this order
 	- An animal should have a name.
 	- An animal should have an age.
 	- An animal should have a gender.
 	- An animal should have a species.
-	- An animal can have multiple toys.
+	- An animal can have multiple toys. -array of strings
 
 - Client:
 	- A client should have a name.
 	- A client should have a number of children.
 	- A client should have an age.
 	- A client should have a number of pets.
-  - A client should have a hash of pets (with pet names as keys and animal (object) as values)
-  - A client should be able to adopt a pet from the shelter
-  - A client should be able to return a pet to the shelter
+  - A client should have a hash of pets (with pet names as keys and animal (object) as values) hash {name: animal}
+  - A client should be able to adopt a pet from the shelter -method -take pet out
+  - A client should be able to return a pet to the shelter -method -take pet in and add to list
 
 - Shelter:
-	- The shelter should be able to return all the clients.
-	- The shelter should be able to return all the animals.
-  - The shelter should be able to create a new animal
-  - The shelter should be able to create a new client
-  - The shelter should be able to accept an existing pet from a client
+	- The shelter should be able to return all the clients. -returns a copy of list of clients but not access to clients (like with cars)
+	- The shelter should be able to return all the animals. -same thing
+  - The shelter should be able to create a new animal from shelter, create Animal.new inside the class that's stored in Shelter and add to its own list. give shelter and existing animal and create new record of animal- when animal not in system yet
+  - The shelter should be able to create a new client - same thing with client
+  - The shelter should be able to accept an existing pet from a client -when client returns a pet that's already in the system
+  ->>one function that accepts an already existing animal
+  >>> and one function 
+  -one creates animal and one just adds to list
+  -list of animals that don't belong to clients
+  >>>>>>have it accept animal, not create new animal?? check with teddy
 
 - Relationships:
 	- A client should be able to adopt an animal.
 	- A client should be able to put an animal up for adoption
 
 #####Phase 1
-- Devine classes 
+- Define classes 
 
 #####Phase 2
 - New animals and clients can be added to the shelter
