@@ -8,6 +8,7 @@ class Shelter
 		@animals = []
 	end
 
+#are these next two necessary?
 	def clients
 		@clients
 	end
@@ -25,30 +26,16 @@ class Shelter
 	end
 
 	def add_client(person)
-		if client.class == Person
+		if person.class == Person
 			@clients << person
 		else
 			return false
 		end
 	end
 
-	def adopt_to(client, animal)
+	def remove_pet(animal)
+		pet = animal(animal_name)
+		animal.delete(animal_name)
+		return pet
 	end
-
-	def return_pet
-	end
-
-	def animals
-	end
-
-#has_pet
-#adopt_to, pass client name and animal
-#accept
-#client doesn't have access to cats
-# ---
-#accept_animal (do we create list first?)
-#accept_client -add client obj to list
-#give pet to client > rel btwn client and shelter
-#accept pet from client > rel btwn client and shelter
-
 end
