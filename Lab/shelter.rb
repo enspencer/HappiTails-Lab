@@ -26,6 +26,12 @@ class Shelter
 		return list
 	end
 
+	def new_client
+	end
+
+	def new_animal
+	end
+
 # return all animals- this works
 	def animals
 		@animals

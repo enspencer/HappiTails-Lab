@@ -32,6 +32,3 @@ class Person
 		return pet
 	end
 end
-
-
-# modularity and sustainability
