@@ -15,7 +15,7 @@ class Person
 
 #write fn to make @num_pets auto populate?
 
-#add pet to person and increment @num_pets- this works
+#add pet to person and increment @num_pets
 	def add_pet(animal)
 		@pets[animal.name] = animal
 		#increment:
@@ -23,7 +23,7 @@ class Person
 		#this is now returning new @num_pets
 	end
 
-#remove pet from person and decrement @num_pets- this works
+#remove pet from person and decrement @num_pets
 	def remove_pet(animal_name)
 		pet = @pets[animal_name]
 		@pets.delete(animal_name)
