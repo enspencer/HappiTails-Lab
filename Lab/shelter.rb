@@ -8,14 +8,14 @@ class Shelter
 		@animals = {}
 	end
 
-# can i delete this?
+# 
 	def clients
 		@clients
 	end
 
 # return clients
 	def list_clients
-		list = Array.new
+		list = []
 		@clients.each_key do |key|
 			list << key
 		end
