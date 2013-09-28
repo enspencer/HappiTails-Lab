@@ -8,32 +8,35 @@ class Shelter
 		@animals = {}
 	end
 
-#are these next two necessary?
+# can i delete this?
 	def clients
 		@clients
 	end
 
+# return clients
+	def list_clients
+		list = Array.new
+		@clients.each_key do |key|
+			list << key
+		end
+		return list
+	end
+
+# return all animals- this works
 	def animals
 		@animals
 	end
 
+# add pet to shelter- this works
 	def add_pet(animal)
 		@animals[animal.name] = animal
 	end
 
+# remove pet from shelter- this works
 	def remove_pet(animal)
 		pet = @animals[animal]
 		@animals.delete(animal)
 		return pet
 	end
-
-	def add_client(person)
-		# if person.class == Person
-		# 	@clients << person
-		# else
-		# 	return false
-		# end
-	end
-
 
 end

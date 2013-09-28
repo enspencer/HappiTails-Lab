@@ -8,13 +8,14 @@ class Person
 		@pets = {}
 	end
 
+#return pets belonging to client
 	def pets
 		@pets
 	end
 
-	#populate pets with input?
+#write fn to make @num_pets auto populate?
 
-#this is good
+#add pet to person and increment @num_pets- this works
 	def add_pet(animal)
 		@pets[animal.name] = animal
 		#increment:
@@ -22,7 +23,7 @@ class Person
 		#this is now returning new @num_pets
 	end
 
-#this is good
+#remove pet from person and decrement @num_pets- this works
 	def remove_pet(animal_name)
 		pet = @pets[animal_name]
 		@pets.delete(animal_name)
@@ -36,18 +37,3 @@ end
 # modularity and sustainability
 
 # auto set num_pets to zero
-# need a way to give data on existing pets to the hash
-
-# DO THIS:
-
-#this part works
-# shelter.add_pet(animal)
-# person.remove_pet(name) -returns an animal to pass above
-
-# same thing
-# shelter.remove_pet(name) 
-# person.add_pet(animal)
-
-
-# what works: person.add_pet(animal)
-# person.remove_pet(animal_name)

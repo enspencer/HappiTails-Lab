@@ -9,4 +9,8 @@ class Animal
 		@toys = [] #array of strings
 	end
 
+	def toys(toy)
+		@toys << toy
+	end
+
 end
