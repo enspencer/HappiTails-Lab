@@ -13,6 +13,10 @@ class Shelter
 		@clients
 	end
 
+	def animals
+		@animals
+	end
+
 # return clients
 	def list_clients
 		list = []

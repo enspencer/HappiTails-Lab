@@ -1,5 +1,5 @@
 class Person
-	attr_accessor :name, :age, :num_pets
+	attr_accessor :name, :age, :num_pets, :pets
 
 	def initialize(name, age, num_pets)
 		@name = name
@@ -35,5 +35,3 @@ end
 
 
 # modularity and sustainability
-
-# auto set num_pets to zero
