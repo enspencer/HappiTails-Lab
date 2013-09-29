@@ -7,7 +7,6 @@ class Shelter
 		@clients = {}
 		@animals = {}
 	end
-
 # 
 	def clients
 		@clients
