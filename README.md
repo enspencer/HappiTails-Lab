@@ -32,7 +32,7 @@
 	- An animal should have an age.
 	- An animal should have a gender.
 	- An animal should have a species.
-	- An animal can have multiple toys. -array of strings
+	- An animal can have multiple toys.
 
 - Client:
 	- A client should have a name.
@@ -40,13 +40,11 @@
 	- A client should have an age.
 	- A client should have a number of pets.
   - A client should have a hash of pets (with pet names as keys and animal (object) as values) hash {name: animal}
-  - A client should be able to adopt a pet from the shelter -method -take pet out
-  - A client should be able to return a pet to the shelter -method -take pet in and add to list
+  - A client should be able to adopt a pet from the shelter
+  - A client should be able to return a pet to the shelter
 
 - Shelter:
 	- The shelter should be able to return all the clients. -returns a copy of list of clients but not access to clients (like with cars)
-	- The shelter should be able to return all the animals. -same thing
-  - The shelter should be able to create a new animal from shelter, create Animal.new inside the class that's stored in Shelter and add to its own list. give shelter and existing animal and create new record of animal- when animal not in system yet
   - The shelter should be able to create a new client - same thing with client
   - The shelter should be able to accept an existing pet from a client -when client returns a pet that's already in the system
   ->>one function that accepts an already existing animal
