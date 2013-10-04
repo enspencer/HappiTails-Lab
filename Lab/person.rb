@@ -4,7 +4,7 @@ class Person
 	def initialize(name, age, num_pets)
 		@name = name
 		@age = age
-		@num_pets = num_pets.to_i
+		@num_pets = num_pets
 		@pets = {}
 	end
 
